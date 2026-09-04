@@ -1,0 +1,73 @@
+/* ================================== General Style start ================================== */
+@font-face {
+  font-family: Exo-Regular;
+  src: url(../fonts/Exo-Regular.ttf);
+}
+
+body {
+  font-family: Exo-Regular;
+  /* font-family: Arial, sans-serif; */
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --purple-color-1: #8d10f5;
+}
+
+.text-purple1 {
+  color: var(--purple-color-1);
+}
+
+.bg-purple1 {
+  background-color: var(--purple-color-1);
+}
+
+.border-purple1 {
+  border-color: var(--purple-color-1);
+}
+/* ================================== General Style end ================================== */
+
+/* ================================== Header start ================================== */
+#hero-section {
+  background-image:
+    linear-gradient(to right, #4d179acc, #59168bcc),
+    url(../Images/hero-bg-img.png);
+  background-position: center;
+  background-size: cover;
+
+  .all-hero {
+    max-width: 850px;
+  }
+
+  .header-title {
+    h1 {
+      font-size: 65px;
+    }
+  }
+
+  .header-form {
+    label {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 8px;
+      font-size: 14px;
+      color: #364153;
+    }
+
+    button {
+      font-weight: 600;
+      font-size: 18px;
+    }
+
+    .btn:hover {
+      color: #ffffff;
+      background-color: #7008e7;
+    }
+  }
+}
+/* ================================== Header end ================================== */
