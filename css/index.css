@@ -4,12 +4,18 @@
   src: url(../fonts/Exo-Regular.ttf);
 }
 
+html {
+  scroll-padding-top: 81px;
+}
+
 body {
   font-family: Exo-Regular;
   /* font-family: Arial, sans-serif; */
 }
 
-* {
+*,
+*::before,
+*::after {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -17,23 +23,73 @@ body {
 
 :root {
   --purple-color-1: #8d10f5;
+  --purple-color-2: #7c3aed;
 }
 
 .text-purple1 {
   color: var(--purple-color-1);
 }
 
+.text-purple2 {
+  color: var(--purple-color-2);
+}
+
 .bg-purple1 {
   background-color: var(--purple-color-1);
+}
+
+.bg-purple2 {
+  background-color: var(--purple-color-2);
 }
 
 .border-purple1 {
   border-color: var(--purple-color-1);
 }
+
+.border-purple2 {
+  border-color: var(--purple-color-2);
+}
 /* ================================== General Style end ================================== */
 
+/* ================================== Navbar start ================================== */
+#eliteHomes-navbar {
+  height: 81px;
+
+  .nav-link.active-link {
+    color: #7c3aed;
+    font-weight: 600;
+  }
+
+  .nav-link {
+    padding-bottom: 4px;
+    transition: color 0.3s;
+  }
+
+  .navbar-nav .nav-link:focus,
+  .navbar-nav .nav-link:hover {
+    color: var(--purple-color-2);
+  }
+
+  .navbar-nav .nav-link::after {
+    content: "";
+    background: linear-gradient(90deg, #7c3aed, #8b5cf6);
+    width: 0;
+    height: 2px;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  .navbar-nav .nav-link:hover::after {
+    background-color: var(--purple-color-2);
+    width: 100%;
+  }
+}
+/* ================================== Navbar end ================================== */
+
 /* ================================== Header start ================================== */
-#hero-section {
+#hero {
   background-image:
     linear-gradient(to right, #4d179acc, #59168bcc),
     url(../Images/hero-bg-img.png);
@@ -46,7 +102,7 @@ body {
 
   .header-title {
     h1 {
-      font-size: 65px;
+      font-size: 52px;
     }
   }
 
@@ -57,6 +113,14 @@ body {
       margin-bottom: 8px;
       font-size: 14px;
       color: #364153;
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: #8b5cf6;
+      box-shadow:
+        0 0 0 2px #fff,
+        0 0 0 4px #8b5cf6;
     }
 
     button {
