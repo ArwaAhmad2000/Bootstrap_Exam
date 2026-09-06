@@ -5,10 +5,44 @@
 }
 
 @media screen and (max-width: 992px) {
+  #eliteHomes-navbar .navbar-collapse {
+    background-color: #fff;
+    margin-top: 0.5rem;
+    padding: 1rem 0 1.5rem;
+    border-radius: 0 0 1rem 1rem;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  }
+
+  #eliteHomes-navbar .navbar-nav .nav-link {
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+  }
+
+  #eliteHomes-navbar .navbar-nav .nav-link:hover {
+    background-color: #f8f5ff;
+  }
+
+  #eliteHomes-navbar .nav-link {
+    margin-inline: 0;
+  }
+
+  #eliteHomes-navbar .nav-link::before {
+    display: none;
+  }
+
+  #eliteHomes-navbar .properties-menu {
+    width: 100%;
+    left: 0;
+    transform: none;
+    margin-top: 0.5rem;
+    padding: 1.25rem;
+    max-height: 70vh;
+    overflow-y: auto;
+  }
 }
 
 @media screen and (max-width: 768px) {
-  #hero-section {
+  #hero {
     .header-title {
       h1 {
         font-size: 48px;
@@ -18,4 +52,17 @@
 }
 
 @media screen and (max-width: 576px) {
+  #hero {
+    .header-title {
+      h1 {
+        font-size: 40px;
+      }
+    }
+  }
+
+  #eliteHomes-navbar {
+    .container-fluid {
+      padding-inline: 1rem;
+    }
+  }
 }
